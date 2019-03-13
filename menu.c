@@ -14,10 +14,10 @@ const char daga_folder[] = "daga";
 const char daga_exe_filename[] = "daga";
 const char editor_folder[] = "pe2";
 const char editor_exe_filename[] = "pe2";
-const char report_filename[] = "rn11";
+const char report_filename[] = "RL41.txt";
 
 const int total_item_num = 7;
-const char menu_str_top[] =				"--[AJ-DosMenu 1.0]-----------------------\n";
+const char menu_str_top[] =				"-[AJ-DosMenu 1.1]------------------------\n";
 const char menu_str_1[] =				"|      A. 執行永盛企業進出口系統        |\n";
 const char menu_str_2[] =				"|      B. 執行永盛企業會計系統          |\n";
 const char menu_str_3[] =				"|      C. 執行大傢企業進出口系統        |\n";
@@ -32,14 +32,16 @@ const char menu_str_selected_4[] =		"|   -->D. 執行大傢企業會計系統<--       |\n
 const char menu_str_selected_5[] =		"|   -->E. 列印報表<--                   |\n";
 const char menu_str_selected_6[] =		"|   -->F. 檔案編輯<--                   |\n";
 const char menu_str_selected_7[] =		"|   -->Q. 按Q或ESC離開選單<--           |\n";
-const char menu_str_bottom[] =			"-----------------------------------------\n";
-const char menu_comment_str[] =			"請按方向鍵或按快速鍵執行, 按Q或ESC可離開選單\n";
-
+const char menu_comment_1[] =			"|  ===================================  |\n";
+const char menu_comment_2[] =			"|      *  按CTRL+ALR使用滑鼠            |\n";
+const char menu_comment_3[] =			"|      *  按CTRL+ALT+F4離開DOS          |\n";
+const char menu_comment_bottom[] =		"-----------------------------------------\n";
+const char menu_description_str[] =			"請按方向鍵或按快速鍵執行, 按Q或ESC離開選單\n";
 const char input_filename_comment_str[] =	"請輸入檔名: ";
 
 enum
 {
-	KEY_ESC		= 27,
+	KEY_ESC         = 27,
 	KEY_ENTER       = 13,
 	KEY_A           = 97,
 	KEY_B           = 98,
@@ -130,8 +132,11 @@ void draw_menu(select_item_num)
 			printf("%s", menu_str_selected_7);
 			break;
 	}
-	printf("%s", menu_str_bottom);
-	printf("%s", menu_comment_str);
+	printf("%s", menu_comment_1);
+	printf("%s", menu_comment_2);
+	printf("%s", menu_comment_3);
+	printf("%s", menu_comment_bottom);
+	printf("%s", menu_description_str);
 
 }
 
@@ -173,6 +178,10 @@ void run_process(select_item_num) {
 			strcat(run_str, "\\");
 			strcat(run_str, editor_exe_filename);
 			strcat(run_str, " ");
+			strcat(run_str, default_drive);
+			strcat(run_str, "\\");
+			strcat(run_str, depota_folder);
+			strcat(run_str, "\\");
 			strcat(run_str, report_filename);
 			printf("%s\n", run_str);
 			system(run_str);
