@@ -27,13 +27,13 @@ const char menu_str_6[] =				"|      F. 檔案編輯                      |\n";
 const char menu_str_7[] =				"|      Q. 按Q或ESC離開選單              |\n";
 const char menu_str_selected_1[] =		"|   -->A. 執行永盛企業進出口系統<--     |\n";
 const char menu_str_selected_2[] =		"|   -->B. 執行永盛企業會計系統<--       |\n";
-const char menu_str_selected_3[] =      "|   -->C. 執行大傢企業進出口系統<--     |\n";
-const char menu_str_selected_4[] =      "|   -->D. 執行大傢企業會計系統<--       |\n";
-const char menu_str_selected_5[] =     	"|   -->E. 列印報表<--                   |\n";
-const char menu_str_selected_6[] =     	"|   -->F. 檔案編輯<--                   |\n";
-const char menu_str_selected_7[] =      "|   -->Q. 按Q或ESC離開選單<--           |\n";
-const char menu_str_bottom[] =          "-----------------------------------------\n";
-const char menu_comment_str[] =         "請按方向鍵或按快速鍵執行, 按Q或ESC可離開選單\n";
+const char menu_str_selected_3[] =		"|   -->C. 執行大傢企業進出口系統<--     |\n";
+const char menu_str_selected_4[] =		"|   -->D. 執行大傢企業會計系統<--       |\n";
+const char menu_str_selected_5[] =		"|   -->E. 列印報表<--                   |\n";
+const char menu_str_selected_6[] =		"|   -->F. 檔案編輯<--                   |\n";
+const char menu_str_selected_7[] =		"|   -->Q. 按Q或ESC離開選單<--           |\n";
+const char menu_str_bottom[] =			"-----------------------------------------\n";
+const char menu_comment_str[] =			"請按方向鍵或按快速鍵執行, 按Q或ESC可離開選單\n";
 
 const char input_filename_comment_str[] =	"請輸入檔名: ";
 
@@ -206,11 +206,11 @@ static int get_code(void)
 void set_select_item_num(total_item_num)
 {
 	int is_exit_menu = FALSE;
-    static int select_item_num = 1;
-    int ch = get_code();
+	static int select_item_num = 1;
+	int ch = get_code();
 
-    while ((ch != KEY_ESC) && (ch != KEY_Q))
-    {
+	while ((ch != KEY_ESC) && (ch != KEY_Q))
+	{
 		switch (ch)
 		{
 			case KEY_A:
@@ -281,7 +281,7 @@ void set_select_item_num(total_item_num)
 			/*printf("press key code: %d\n", ch);*/
 			ch = get_code();
 		}
-    }
+	}
 }
 
 void print_word(char word[10])
