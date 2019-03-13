@@ -169,7 +169,7 @@ void run_process(select_item_num) {
 			strcat(run_str, " ");
 			strcat(run_str, report_filename);
 			printf("%s\n", run_str);
-			/*system(run_str);*/
+			system(run_str);
 			break;
 		case 6:
 			/*chdir(editor_folder);*/
@@ -183,7 +183,7 @@ void run_process(select_item_num) {
 			strcat(run_str, " ");
 			strcat(run_str, input_filename);
 			printf("%s\n", run_str);
-			/*system(run_str);*/
+			system(run_str);
 			break;			
 	}
 	set_env();
@@ -207,32 +207,26 @@ void set_select_item_num(total_item_num)
         switch (ch)
         {
 			case KEY_A:
-				printf("A\n");
 				run_process(1);
 				draw_menu(select_item_num);
 				break;
 			case KEY_B:
-				printf("B\n");
 				run_process(2);
 				draw_menu(select_item_num);
 				break;
 			case KEY_C:
-				printf("C\n");
 				run_process(3);
 				draw_menu(select_item_num);
 				break;
 			case KEY_D:
-				printf("D\n");
 				run_process(4);
 				draw_menu(select_item_num);
 				break;
 			case KEY_E:
-				printf("E\n");
 				run_process(5);
 				draw_menu(select_item_num);
 				break;
 			case KEY_F:
-				printf("F\n");
 				run_process(6);
 				draw_menu(select_item_num);
 				break;
@@ -255,7 +249,6 @@ void set_select_item_num(total_item_num)
 				draw_menu(select_item_num);
 				break;
 			case KEY_ENTER:
-				printf("ENTER\n");
 				draw_menu(select_item_num);
 				break;
 			/*
