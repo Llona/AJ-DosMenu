@@ -33,7 +33,7 @@ const char menu_str_selected_5[] =		"|   -->E. 列印報表<--                   |\n
 const char menu_str_selected_6[] =		"|   -->F. 檔案編輯<--                   |\n";
 const char menu_str_selected_7[] =		"|   -->Q. 按Q或ESC離開選單<--           |\n";
 const char menu_comment_1[] =			"|  ===================================  |\n";
-const char menu_comment_2[] =			"|      *  按CTRL+ALR使用滑鼠            |\n";
+const char menu_comment_2[] =			"|      *  按CTRL+ALT使用滑鼠            |\n";
 const char menu_comment_3[] =			"|      *  按CTRL+ALT+F4離開DOS          |\n";
 const char menu_comment_bottom[] =		"-----------------------------------------\n";
 const char menu_description_str[] =			"請按方向鍵或按快速鍵執行, 按Q或ESC離開選單\n";
