@@ -17,7 +17,7 @@ const char editor_exe_filename[] = "pe2";
 const char report_filename[] = "RL41.txt";
 
 const int total_item_num = 7;
-const char menu_str_top[] =				"-[AJ-DosMenu 1.11]-----------------------\n";
+const char menu_str_top[] =				"-[AJ-DosMenu 1.12]-----------------------\n";
 const char menu_str_1[] =				"|      A. 執行永盛企業進出口系統        |\n";
 const char menu_str_2[] =				"|      B. 執行永盛企業會計系統          |\n";
 const char menu_str_3[] =				"|      C. 執行大傢企業進出口系統        |\n";
@@ -58,8 +58,8 @@ enum
 
 enum
 {
-	TRUE = 0,
-	FALSE = 1
+	FALSE = 0,
+	TRUE = 1
 };
 
 void draw_menu(select_item_num)
@@ -218,7 +218,7 @@ void set_select_item_num(total_item_num)
 	static int select_item_num = 1;
 	int ch = get_code();
 
-	while ((ch != KEY_ESC) && (ch != KEY_Q))
+	while (TRUE)
 	{
 		switch (ch)
 		{
@@ -273,6 +273,10 @@ void set_select_item_num(total_item_num)
 					draw_menu(select_item_num);
 				}
 				break;
+			case KEY_ESC:
+			case KEY_Q:
+				is_exit_menu = TRUE;
+				break;
 			/*
 			case ARROW_LEFT:
 				printf("LEFT\n");
@@ -284,6 +288,7 @@ void set_select_item_num(total_item_num)
 		}
 
 		if (is_exit_menu == TRUE) {
+			system("cls");
 			break;
 		}
 		else {
