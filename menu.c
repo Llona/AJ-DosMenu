@@ -4,20 +4,20 @@
 
 const char default_drive[] = "D:";
 const char default_folder[] = "tools";
-const char depota_folder[] = "depota";
-const char depota_exe_filename[] = "depota";
-const char acca_folder[] = "acca";
-const char acca_exe_filename[] = "acca";
-const char accga_folder[] = "accga";
-const char accga_exe_filename[] = "accga";
-const char daga_folder[] = "daga";
-const char daga_exe_filename[] = "daga";
+const char program_1_folder[] = "depota";
+const char program_1_exe_filename[] = "depota";
+const char program_2_folder[] = "acca";
+const char program_2_exe_filename[] = "acca";
+const char program_3_folder[] = "daga";
+const char program_3_exe_filename[] = "daga";
+const char program_4_folder[] = "accga";
+const char program_4_exe_filename[] = "accga";
 const char editor_folder[] = "pe2";
 const char editor_exe_filename[] = "pe2";
 const char report_filename[] = "RL41.txt";
 
 const int total_item_num = 7;
-const char menu_str_top[] =				"-[AJ-DosMenu 1.1]------------------------\n";
+const char menu_str_top[] =				"-[AJ-DosMenu 1.11]-----------------------\n";
 const char menu_str_1[] =				"|      A. 執行永盛企業進出口系統        |\n";
 const char menu_str_2[] =				"|      B. 執行永盛企業會計系統          |\n";
 const char menu_str_3[] =				"|      C. 執行大傢企業進出口系統        |\n";
@@ -155,20 +155,20 @@ void run_process(select_item_num) {
 	switch(select_item_num)
 	{
 		case 1:
-			chdir(depota_folder);
-			system(depota_exe_filename);
+			chdir(program_1_folder);
+			system(program_1_exe_filename);
 			break;
 		case 2:
-			chdir(acca_folder);
-			system(acca_exe_filename);
+			chdir(program_2_folder);
+			system(program_2_exe_filename);
 			break;
 		case 3:
-			chdir(daga_folder);
-			system(daga_exe_filename);
+			chdir(program_3_folder);
+			system(program_3_exe_filename);
 			break;
 		case 4:
-			chdir(accga_folder);
-			system(accga_exe_filename);
+			chdir(program_4_folder);
+			system(program_4_exe_filename);
 			break;
 		case 5:
 			/*chdir(editor_folder);*/
@@ -180,7 +180,7 @@ void run_process(select_item_num) {
 			strcat(run_str, " ");
 			strcat(run_str, default_drive);
 			strcat(run_str, "\\");
-			strcat(run_str, depota_folder);
+			strcat(run_str, program_1_folder);
 			strcat(run_str, "\\");
 			strcat(run_str, report_filename);
 			printf("%s\n", run_str);
