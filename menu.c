@@ -17,7 +17,7 @@ const char editor_exe_filename[] = "pe2";
 const char report_filename[] = "RL41.txt";
 
 const int total_item_num = 7;
-const char menu_str_top[] =				"-[AJ-DosMenu 1.14]--------------------------\n";
+const char menu_str_top[] =				"-[AJ-DosMenu 1.15]--------------------------\n";
 const char menu_str_1[] =				"|      A. 執行永盛貨櫃管理 (DEPOTA)        |\n";
 const char menu_str_2[] =				"|      B. 執行永盛會計系統 (ACCA)          |\n";
 const char menu_str_3[] =				"|      C. 執行大傢貨櫃管理 (DAGA)          |\n";
@@ -40,6 +40,7 @@ const char menu_comment_bottom[] =		"-------------------------------------------
 const char menu_description_str[] =			"請按方向鍵或按快速鍵執行, 按Q或ESC離開選單\n";
 const char input_filename_comment_str[] =	"請輸入檔名, 保持空白按ENTER回到選單: ";
 
+const char exit_message_str[] = "已離開DosMenu\n輸入D:\\tools\\menu.exe重新執行DosMenu\n";
 enum
 {
 	KEY_ESC         = 27,
@@ -201,6 +202,7 @@ void run_process(select_item_num) {
 				strcat(run_str, editor_exe_filename);
 				strcat(run_str, " ");
 				strcat(run_str, input_filename);
+				run_str[strlen(run_str) - 1] = '\0';
 				printf("%s\n", run_str);
 				system(run_str);
 			}
@@ -294,6 +296,7 @@ void set_select_item_num(total_item_num)
 
 		if (is_exit_menu == TRUE) {
 			system("cls");
+			printf("%s", exit_message_str);
 			break;
 		}
 		else {
