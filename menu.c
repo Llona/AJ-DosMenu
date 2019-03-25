@@ -17,7 +17,7 @@ const char editor_exe_filename[] = "pe2";
 const char report_filename[] = "RL41.txt";
 
 const int total_item_num = 7;
-const char menu_str_top[] =				"-[AJ-DosMenu 1.16]--------------------------\n";
+const char menu_str_top[] =				"-[AJ-DosMenu 1.17]--------------------------\n";
 const char menu_str_1[] =				"|      A. 執行永盛貨櫃管理 (DEPOTA)        |\n";
 const char menu_str_2[] =				"|      B. 執行永盛會計系統 (ACCA)          |\n";
 const char menu_str_3[] =				"|      C. 執行大傢貨櫃管理 (DAGA)          |\n";
@@ -37,7 +37,7 @@ const char menu_comment_2[] =			"|      *  按CTRL+ALT使用滑鼠               |\n"
 const char menu_comment_3[] =			"|      *  再按ALT+F4點選POWER OFF離開DOS   |\n";
 const char menu_comment_4[] =			"|      *  按CTRL+ALT+INS執行暖開機         |\n";
 const char menu_comment_bottom[] =		"--------------------------------------------\n";
-const char menu_description_str[] =			"請按方向鍵或按快速鍵執行, 按Q或ESC離開選單\n";
+const char menu_description_str[] =			"請按方向鍵或按快速鍵執行, 按Q離開選單\n";
 const char input_filename_comment_str[] =	"請輸入檔名, 保持空白按ENTER回到選單: ";
 
 const char exit_message_str[] = "已離開DosMenu\n輸入D:\\tools\\menu.exe重新執行DosMenu\n";
@@ -280,7 +280,7 @@ void set_select_item_num(total_item_num)
 					draw_menu(select_item_num);
 				}
 				break;
-			case KEY_ESC:
+			/*case KEY_ESC:*/
 			case KEY_Q:
 				is_exit_menu = TRUE;
 				break;
