@@ -17,7 +17,7 @@ const char editor_exe_filename[] = "pe2";
 const char report_filename[] = "RL41.txt";
 
 const int total_item_num = 7;
-const char menu_str_top[] =				"-[AJ-DosMenu 1.15]--------------------------\n";
+const char menu_str_top[] =				"-[AJ-DosMenu 1.16]--------------------------\n";
 const char menu_str_1[] =				"|      A. 執行永盛貨櫃管理 (DEPOTA)        |\n";
 const char menu_str_2[] =				"|      B. 執行永盛會計系統 (ACCA)          |\n";
 const char menu_str_3[] =				"|      C. 執行大傢貨櫃管理 (DAGA)          |\n";
@@ -34,7 +34,7 @@ const char menu_str_selected_6[] =		"|   -->F. 文書處理<--                      
 const char menu_str_selected_7[] =		"|   -->Q. 回到DOS命令列<--                 |\n";
 const char menu_comment_1[] =			"|  ======================================= |\n";
 const char menu_comment_2[] =			"|      *  按CTRL+ALT使用滑鼠               |\n";
-const char menu_comment_3[] =			"|      *  按CTRL+ALT再按ALT+F4離開DOS      |\n";
+const char menu_comment_3[] =			"|      *  再按ALT+F4點選POWER OFF離開DOS   |\n";
 const char menu_comment_4[] =			"|      *  按CTRL+ALT+INS執行暖開機         |\n";
 const char menu_comment_bottom[] =		"--------------------------------------------\n";
 const char menu_description_str[] =			"請按方向鍵或按快速鍵執行, 按Q或ESC離開選單\n";
